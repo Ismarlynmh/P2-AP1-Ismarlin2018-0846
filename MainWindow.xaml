@@ -1,0 +1,24 @@
+﻿<Window x:Class="P2_AP1_Ismarlin2018_0846.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P2_AP1_Ismarlin2018_0846"
+        mc:Ignorable="d"
+        Title="Menu Principal" Height="400" Width="400" Background="LightBlue"   Icon="/Resources/gestion-de-proyectos.png">
+    <Grid>
+        <StackPanel Orientation = "Horizontal">
+            <Menu Background="LightGray" Height="20" Width="200" VerticalAlignment="Top">
+                <MenuItem Header="Registros">
+                    <MenuItem x:Name="rProyectos" Header="Registro de Proyectos" Click="rProyectos_Click"/>
+                </MenuItem>
+            </Menu>
+
+            <Menu Background="LightGray" Height="20" Width="200" VerticalAlignment="Top">
+                <MenuItem Header="Consultas">
+                    <MenuItem x:Name="cProyectos" Header="Consulta de Proyectos"  Click="cProyectos_Click"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+    </Grid>
+</Window>
