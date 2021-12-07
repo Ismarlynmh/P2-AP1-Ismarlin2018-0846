@@ -12,7 +12,9 @@ namespace P2_AP1_Ismarlin2018_0846.Entidades
     {
         [Key]
         public int TipoId { get; set; }
-        public string Descripcion { get; set; }
+        public string TipoTarea { get; set; }
+        public DateTime FechaIngreso { get; set; }
+        public int TiempoTarea { get; set; }
 
         public TipoTareas() { }
     }

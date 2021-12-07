@@ -27,8 +27,8 @@ namespace P2_AP1_Ismarlin2018_0846.UI.Registros
         {
             InitializeComponent();
             TipoTareaComboBox.ItemsSource = TipoTareasBLL.GetList();
-            TipoTareaComboBox.SelectedValuePath = "TipoId";
-            TipoTareaComboBox.DisplayMemberPath = "Descripcion";
+            TipoTareaComboBox.SelectedValuePath = "TipoId"; 
+            TipoTareaComboBox.DisplayMemberPath = "TipoTarea";
             Limpiar();
         }
         private void Limpiar()

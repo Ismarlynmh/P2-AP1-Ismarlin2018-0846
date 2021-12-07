@@ -21,10 +21,11 @@ namespace P2_AP1_Ismarlin2018_0846.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<TipoTareas>().HasData(new TipoTareas() { TipoId = 1, Descripcion = "Analisis" });
-            modelBuilder.Entity<TipoTareas>().HasData(new TipoTareas() { TipoId = 2, Descripcion = "Diseño" });
-            modelBuilder.Entity<TipoTareas>().HasData(new TipoTareas() { TipoId = 3, Descripcion = "Programacion" });
-            modelBuilder.Entity<TipoTareas>().HasData(new TipoTareas() { TipoId = 4, Descripcion = "Prueba" });
+            modelBuilder.Entity<TipoTareas>().HasData(
+            new TipoTareas { TipoId = 1, TipoTarea = "Analisis", FechaIngreso = DateTime.Now.AddDays(1) },
+            new TipoTareas { TipoId = 2, TipoTarea = "Diseño", FechaIngreso = DateTime.Now.AddDays(1) },
+            new TipoTareas { TipoId = 3, TipoTarea = "Programacion", FechaIngreso = DateTime.Now.AddDays(1) },
+            new TipoTareas { TipoId = 4, TipoTarea = "Prueba", FechaIngreso = DateTime.Now.AddDays(1) });
         }
     }
 }

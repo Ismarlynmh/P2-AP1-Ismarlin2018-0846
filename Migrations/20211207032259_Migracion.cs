@@ -28,7 +28,9 @@ namespace P2_AP1_Ismarlin2018_0846.Migrations
                 {
                     TipoId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Descripcion = table.Column<string>(type: "TEXT", nullable: true)
+                    TipoTarea = table.Column<string>(type: "TEXT", nullable: true),
+                    FechaIngreso = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    TiempoTarea = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -59,23 +61,23 @@ namespace P2_AP1_Ismarlin2018_0846.Migrations
 
             migrationBuilder.InsertData(
                 table: "TipoTareas",
-                columns: new[] { "TipoId", "Descripcion" },
-                values: new object[] { 1, "Analisis" });
+                columns: new[] { "TipoId", "FechaIngreso", "TiempoTarea", "TipoTarea" },
+                values: new object[] { 1, new DateTime(2021, 12, 7, 23, 22, 53, 868, DateTimeKind.Local).AddTicks(8823), 0, "Analisis" });
 
             migrationBuilder.InsertData(
                 table: "TipoTareas",
-                columns: new[] { "TipoId", "Descripcion" },
-                values: new object[] { 2, "Diseño" });
+                columns: new[] { "TipoId", "FechaIngreso", "TiempoTarea", "TipoTarea" },
+                values: new object[] { 2, new DateTime(2021, 12, 7, 23, 22, 53, 944, DateTimeKind.Local).AddTicks(2862), 0, "Diseño" });
 
             migrationBuilder.InsertData(
                 table: "TipoTareas",
-                columns: new[] { "TipoId", "Descripcion" },
-                values: new object[] { 3, "Programacion" });
+                columns: new[] { "TipoId", "FechaIngreso", "TiempoTarea", "TipoTarea" },
+                values: new object[] { 3, new DateTime(2021, 12, 7, 23, 22, 53, 944, DateTimeKind.Local).AddTicks(3005), 0, "Programacion" });
 
             migrationBuilder.InsertData(
                 table: "TipoTareas",
-                columns: new[] { "TipoId", "Descripcion" },
-                values: new object[] { 4, "Prueba" });
+                columns: new[] { "TipoId", "FechaIngreso", "TiempoTarea", "TipoTarea" },
+                values: new object[] { 4, new DateTime(2021, 12, 7, 23, 22, 53, 944, DateTimeKind.Local).AddTicks(3020), 0, "Prueba" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProyectosDetalle_ProyectoId",

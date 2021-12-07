@@ -9,14 +9,14 @@ using P2_AP1_Ismarlin2018_0846.DAL;
 namespace P2_AP1_Ismarlin2018_0846.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211108223523_Migracion")]
+    [Migration("20211207032259_Migracion")]
     partial class Migracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.12");
+                .HasAnnotation("ProductVersion", "5.0.11");
 
             modelBuilder.Entity("P2_AP1_Ismarlin2018_0846.Entidades.Proyectos", b =>
                 {
@@ -69,7 +69,13 @@ namespace P2_AP1_Ismarlin2018_0846.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Descripcion")
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TiempoTarea")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TipoTarea")
                         .HasColumnType("TEXT");
 
                     b.HasKey("TipoId");
@@ -80,22 +86,30 @@ namespace P2_AP1_Ismarlin2018_0846.Migrations
                         new
                         {
                             TipoId = 1,
-                            Descripcion = "Analisis"
+                            FechaIngreso = new DateTime(2021, 12, 7, 23, 22, 53, 868, DateTimeKind.Local).AddTicks(8823),
+                            TiempoTarea = 0,
+                            TipoTarea = "Analisis"
                         },
                         new
                         {
                             TipoId = 2,
-                            Descripcion = "Diseño"
+                            FechaIngreso = new DateTime(2021, 12, 7, 23, 22, 53, 944, DateTimeKind.Local).AddTicks(2862),
+                            TiempoTarea = 0,
+                            TipoTarea = "Diseño"
                         },
                         new
                         {
                             TipoId = 3,
-                            Descripcion = "Programacion"
+                            FechaIngreso = new DateTime(2021, 12, 7, 23, 22, 53, 944, DateTimeKind.Local).AddTicks(3005),
+                            TiempoTarea = 0,
+                            TipoTarea = "Programacion"
                         },
                         new
                         {
                             TipoId = 4,
-                            Descripcion = "Prueba"
+                            FechaIngreso = new DateTime(2021, 12, 7, 23, 22, 53, 944, DateTimeKind.Local).AddTicks(3020),
+                            TiempoTarea = 0,
+                            TipoTarea = "Prueba"
                         });
                 });
 
